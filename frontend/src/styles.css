@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; color: #1f2937; }
+button, select, textarea { font: inherit; }
+.page { max-width: 1200px; margin: 0 auto; padding: 32px 20px; }
+header { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 24px; }
+h1 { margin: 0 0 6px; }
+h2 { margin-top: 0; }
+.cards, .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.grid { margin-top: 20px; }
+.card { background: white; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+select { width: 100%; padding: 10px; margin-bottom: 10px; }
+textarea { width: 100%; min-height: 180px; padding: 10px; margin: 10px 0; border: 1px solid #d1d5db; border-radius: 6px; resize: vertical; }
+button { border: 0; background: #111827; color: white; padding: 10px 14px; border-radius: 6px; cursor: pointer; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.ok { color: #15803d; }
+.bad { color: #b91c1c; }
+.muted { color: #6b7280; }
+.error { background: #fee2e2; color: #991b1b; padding: 12px; border-radius: 6px; margin-bottom: 20px; }
+.table-wrap { overflow-x: auto; margin-top: 15px; }
+.toolbar { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.table-title { display: flex; align-items: center; gap: 8px; font-size: 1.17em; font-weight: 700; margin: 18px 0 0; }
+.table-list { margin: 0; padding-left: 20px; line-height: 1.8; }
+.constraints { margin-top: 10px; font-size: 13px; color: #4b5563; }
+.constraints p { margin: 4px 0; overflow-wrap: anywhere; }
+.section-heading { margin-top: 24px; }
+pre { max-height: 260px; overflow: auto; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 12px; font-size: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e5e7eb; white-space: nowrap; }
+@media (max-width: 800px) { .cards, .grid { grid-template-columns: 1fr; } header { align-items: flex-start; flex-direction: column; } }
+.query-input { margin-bottom: 16px; }
+.query-input label { display: block; margin-bottom: 6px; font-size: 14px; }
+.query-input textarea { min-height: 70px; }
+.transform-result { margin-top: 24px; border-top: 1px solid #e5e7eb; padding-top: 16px; }
+
