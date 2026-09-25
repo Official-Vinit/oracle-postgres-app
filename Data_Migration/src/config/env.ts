@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { EnvConfig } from "../types/types";
+import { EnvConfig } from "../types/types.js";
 
 function getEnv(name: string): string {
     const value: string | undefined =

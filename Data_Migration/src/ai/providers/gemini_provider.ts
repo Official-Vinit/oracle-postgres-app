@@ -1,8 +1,8 @@
 import { GoogleGenAI } from "@google/genai";
-import { env } from "../../config/env";
-import { SCHEMA_DESIGN_PROMPT } from "../prompts/schemadesign_prompt";
-import { schemaDesignSchema } from "../schemas/schemadesign_schema";
-import { SchemaDesignResponse } from "../schemas/schemadesign_zod";
+import { env } from "../../config/env.js";
+import { SCHEMA_DESIGN_PROMPT } from "../prompts/schemadesign_prompt.js";
+import { schemaDesignSchema } from "../schemas/schemadesign_schema.js";
+import { SchemaDesignResponse } from "../schemas/schemadesign_zod.js";
 export type SchemaDesignInput = {
     selected_schema: unknown;
     current_design?: unknown;

@@ -1,7 +1,7 @@
 import { Router, Request, Response } from "express";
-import { generateSchemaDesign } from "../ai/ai_serivce";
-import { SchemaDesignRequest } from "../ai/schemas/schemadesign_request_zod";
-import { SchemaDesignResponse } from "../ai/schemas/schemadesign_zod";
+import { generateSchemaDesign } from "../ai/ai_serivce.js";
+import { SchemaDesignRequest } from "../ai/schemas/schemadesign_request_zod.js";
+import { SchemaDesignResponse } from "../ai/schemas/schemadesign_zod.js";
 
 export const schemaDesignRouter = Router();
 

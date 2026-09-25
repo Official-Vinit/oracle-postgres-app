@@ -1,7 +1,7 @@
 import Groq from "groq-sdk";
-import { env } from "../../config/env";
-import { SCHEMA_DESIGN_PROMPT } from "../prompts/schemadesign_prompt";
-import { schemaDesignSchema } from "../schemas/schemadesign_schema";
+import { env } from "../../config/env.js";
+import { SCHEMA_DESIGN_PROMPT } from "../prompts/schemadesign_prompt.js";
+import { schemaDesignSchema } from "../schemas/schemadesign_schema.js";
 
 const client = new Groq({
     apiKey: env.groqApiKey

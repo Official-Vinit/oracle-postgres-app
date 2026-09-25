@@ -1,6 +1,6 @@
-import { generateWithGemini } from "./providers/gemini_provider";
-import { generateWithGroq } from "./providers/groq_provider";
-import type { SchemaDesignInput } from "../types/types";
+import { generateWithGemini } from "./providers/gemini_provider.js";
+import { generateWithGroq } from "./providers/groq_provider.js";
+import type { SchemaDesignInput } from "../types/types.js";
 
 export async function generateSchemaDesign(input: SchemaDesignInput) {
 
