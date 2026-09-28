@@ -8,19 +8,27 @@ router = APIRouter()
 @router.post("/transformation")
 async def transformation(data: dict):
 
-    if data.get("source") != "oracle":
+    if "result" not in data:
+        return {
+            "status": "error",
+            "message": "result is required."
+        }
+
+    result = data["result"]
+
+    if result.get("source") != "oracle":
         return {
             "status": "error",
             "message": "Unsupported source. Only 'oracle' is supported."
         }
 
-    if data.get("target") != "postgresql":
+    if result.get("target") != "postgresql":
         return {
             "status": "error",
             "message": "Unsupported target. Only 'postgresql' is supported."
         }
 
-    if "table_management" not in data:
+    if "table_management" not in result:
         return {
             "status": "error",
             "message": "table_management is required."
@@ -28,7 +36,7 @@ async def transformation(data: dict):
 
     try:
         execute_table_management(
-            data["table_management"]
+            result["table_management"]
         )
 
         return {
