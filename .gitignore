@@ -16,3 +16,6 @@ Data_Migration/.git.nested-backup
 **/.env
 **/.env.*
 !.env.example
+
+Data_Pipeline/app/.env
+*.pyc
